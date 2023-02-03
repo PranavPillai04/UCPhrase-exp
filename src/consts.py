@@ -24,11 +24,11 @@ class DataConfig:
         dir_config = path_config_json.parent
 
         self.lm_name = config_dict['lm_name']
-        # self.path_test = dir_config / config_dict['path_test']
+        self.path_test = dir_config / config_dict['path_test']
         self.path_train = dir_config / config_dict['path_train']
         self.path_phrase = dir_config / config_dict['path_phrase']
-        # self.path_tagging_docs = dir_config / config_dict['path_tagging_docs']
-        # self.paths_tagging_human = [dir_config / p for p in config_dict['paths_tagging_human']]
+        self.path_tagging_docs = dir_config / config_dict['path_tagging_docs']
+        self.paths_tagging_human = [dir_config / p for p in config_dict['paths_tagging_human']]
         # self.path_stem_test = dir_config / config_dict['path_stem_test']
         # self.path_stem_train = dir_config / config_dict['path_stem_train']
         # self.path_stem_doc2references = dir_config / config_dict['path_stem_doc2references']

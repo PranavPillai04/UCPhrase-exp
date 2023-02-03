@@ -65,16 +65,17 @@ class Experiment:
                 num_BERT_layers=self.config['num_lm_layers'])
             self.trainer = model_att.AttmapTrainer(
                 model=model)
-        elif self.config['model'] == 'emb':
-            model = model_emb.EmbedModel(
-                model_dir=model_dir,
-                finetune=self.config['finetune']
-            )
-            self.trainer = model_emb.EmbedTrainer(
-                model=model
-            )
+        # elif self.config['model'] == 'emb':
+        #     model = model_emb.EmbedModel(
+        #         model_dir=model_dir,
+        #         finetune=self.config['finetune']
+        #     )
+        #     self.trainer = model_emb.EmbedTrainer(
+        #         model=model
+        #     )
 
-    def train(self, num_epochs=20):
+    # def train(self, num_epochs=20):
+    def train(self, num_epochs=40):
         # conv = AmazonDataConverter()
         # conv.convert()
         # initial_data_conversion
@@ -83,6 +84,8 @@ class Experiment:
         self.train_annotator.mark_corpus()
 
         path_sampled_train_data = self.train_annotator.sample_train_data()
+        # print(path_sampled_train_data)
+
         self.trainer.train(path_sampled_train_data=path_sampled_train_data, num_epochs=num_epochs)
 
     def select_best_epoch(self):
@@ -140,6 +143,7 @@ class Experiment:
             print(f'Evaluate {path_decoded_doc2sents}')
             print(evaluator.evaluate(path_decoded_doc2sents, paths_doc2golds=paths_gold))
         else:
+            pass
             path_decoded_doc2cands = model_base.BaseModel.get_doc2cands(
                 path_predicted_docs=path_predicted_docs,
                 output_dir=dir_decoded,
@@ -155,6 +159,6 @@ class Experiment:
 if __name__ == '__main__':
     exp = Experiment()
     exp.train()
-    # best_epoch = exp.select_best_epoch()
-    # exp.predict(epoch=best_epoch, for_tagging=True)
-    # exp.predict(epoch=best_epoch, for_tagging=False)
+    best_epoch = exp.select_best_epoch()
+    exp.predict(epoch=best_epoch, for_tagging=True)
+    exp.predict(epoch=best_epoch, for_tagging=False)
