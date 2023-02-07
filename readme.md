@@ -34,9 +34,10 @@ bash build.sh
 
 ```bash
 cd src
-python exp.py --gpu 0 --dir_data ../data/devdata
+python exp.py --gpu 0 --dir_data ../data/kpShoes
 ```
 
+(This is currently configured to work on the kpShoes dataset. To change, please change target in line 97 of src/preprocess/annotator_core.py)
 
 The result files are organized under `experiments/${expname}/model`:
 
