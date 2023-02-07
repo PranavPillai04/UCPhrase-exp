@@ -94,7 +94,9 @@ class CoreAnnotator(BaseAnnotator):
 
         ## CHANGE THIS FOR PT
 
-        candidates_docs = utils.JsonLine.load("/shared/data2/ppillai3/test/UCPhrase-exp/data/kpShoes/standard/shoes.candidateAsins.jsonl")
+        candidates_docs = utils.JsonLine.load("../../data/kpShoes/standard/shoes.candidateAsins.jsonl")
+
+        # candidates_docs = utils.JsonLine.load("/shared/data2/ppillai3/test/UCPhrase-exp/data/kpShoes/standard/shoes.candidateAsins.jsonl")
         candidate_doc = ""
         candidates = []
         for doc in candidates_docs:
