@@ -58,6 +58,8 @@ The result files are organized under `experiments/${expname}/model`:
 
 ## Citation
 
-If you find the implementation useful, please consider citing the following paper:
+If you find the implementation useful, please consider citing the following papers:
 
 Xiaotao Gu*, Zihan Wang*, Zhenyu Bi, Yu Meng, Liyuan Liu, Jiawei Han, Jingbo Shang, "UCPhrase: Unsupervised Context-aware Quality Phrase Tagging", in Proc. of 2021 ACM SIGKDD Int. Conf. on Knowledge Discovery and Data Mining (KDD'21), Aug. 2021
+
+Zhang, Xinyang and Zhang, Chenwei and Li, Xian and Dong, Xin Luna and Shang, Jingbo and Faloutsos, Christos and Han, Jiawei, "OA-Mine: Open-World Attribute Mining for E-Commerce Products with Weak Supervision", in Proc. of the ACM Web Conference 2022 (WWW '22), 2022
