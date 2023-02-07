@@ -1,4 +1,4 @@
-<h2 align="center">UCPhrase: Unsupervised Context-aware Quality Phrase Tagging</h2>
+<h2 align="center">In Progress: OAMine-Extension (Based on OAMine and UCPhrase)</h2>
 
 <h5 align="center">To appear on KDD'21...[<a href="https://arxiv.org/abs/2105.14078" title="[pdf]">pdf</a>]
  </h5>
